@@ -7,13 +7,14 @@ import UpcomingTrips from "@/components/UpcomingTrips";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen " >
       <Navbar />
       <Hero />
       <FeatureSection />
       <UpcomingTrips />
       <Testimonials />
       <Footer />
+      {/* <h1 className="text-3xl font-bold underline text-travel-earth ">Text</h1> */}
     </div>
   )
 }
