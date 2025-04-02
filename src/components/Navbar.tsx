@@ -2,27 +2,34 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
+      if (pathname === "/") {
+        setIsScrolled(window.scrollY > 50);
       } else {
-        setIsScrolled(false);
+        setIsScrolled(true);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-travel-earth/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300  ${isScrolled ? 'bg-travel-earth/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="text-2xl font-serif font-bold text-white">WANDERLUX</Link>
 
@@ -36,8 +43,9 @@ const Navbar = () => {
 
           <div className="relative">
             <button
-              className="navbar-item flex items-center"
+              className="navbar-item flex items-center cursor-pointer"
               onClick={() => setDropdownOpen(!dropdownOpen)}
+              onBlur={() => setTimeout(() => setDropdownOpen(false), 100)}
             >
               More <ChevronDown className="ml-1 h-4 w-4" />
             </button>
