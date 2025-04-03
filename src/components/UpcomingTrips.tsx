@@ -92,7 +92,7 @@ const UpcomingTrips = () => {
 
         <div className="text-center mt-12">
           <Link href="/trips" >
-            <button className="btn-primary">View All Trips</button>
+            <button className="btn-primary cursor-pointer">View All Trips</button>
           </Link>
         </div>
       </div>

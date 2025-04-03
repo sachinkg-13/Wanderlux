@@ -1,4 +1,5 @@
 import { Users, CreditCard, Clipboard, User } from 'lucide-react';
+import Link from 'next/link';
 
 const FeatureSection = () => {
   return (
@@ -6,7 +7,7 @@ const FeatureSection = () => {
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-travel-earth">Trips for all travellers</h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Whatever your situation, whichever destination - if you're looking
             for a good time, we've got you covered
           </p>
@@ -71,7 +72,9 @@ const FeatureSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="btn-primary">Who We Are</button>
+          <Link href="/about">
+            <button className="btn-primary cursor-pointer">Who We Are</button>
+          </Link>
         </div>
       </div>
     </section>
