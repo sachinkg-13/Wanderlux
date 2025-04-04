@@ -1,6 +1,8 @@
+import ExploreIndia from "@/components/ExploreIndia";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import InternationalTrips from "@/components/InternationalTrips";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
 import UpcomingTrips from "@/components/UpcomingTrips";
@@ -11,6 +13,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeatureSection />
+      <InternationalTrips />
+      <ExploreIndia />
       <UpcomingTrips />
       <Testimonials />
       <Footer />
