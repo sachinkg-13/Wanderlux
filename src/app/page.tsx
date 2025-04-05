@@ -1,6 +1,7 @@
 import ExploreIndia from "@/components/ExploreIndia";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/components/Footer";
+import GuidedTravel from "@/components/GuidedTravel";
 import Hero from "@/components/Hero";
 import InternationalTrips from "@/components/InternationalTrips";
 import Navbar from "@/components/Navbar";
@@ -16,6 +17,7 @@ export default function Home() {
       <InternationalTrips />
       <ExploreIndia />
       <UpcomingTrips />
+      <GuidedTravel />
       <Testimonials />
       <Footer />
       {/* <h1 className="text-3xl font-bold underline text-travel-earth ">Text</h1> */}
