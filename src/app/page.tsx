@@ -1,3 +1,4 @@
+import BestMoments from "@/components/BestMoments";
 import ExploreIndia from "@/components/ExploreIndia";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
       <ExploreIndia />
       <UpcomingTrips />
       <GuidedTravel />
+      <BestMoments />
       <Testimonials />
       <Footer />
       {/* <h1 className="text-3xl font-bold underline text-travel-earth ">Text</h1> */}
