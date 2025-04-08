@@ -1,5 +1,6 @@
 import BestMoments from "@/components/BestMoments";
 import ExploreIndia from "@/components/ExploreIndia";
+import FeaturedTours from "@/components/FeaturedTours";
 import FeatureSection from "@/components/FeatureSection";
 import Footer from "@/components/Footer";
 import GuidedTravel from "@/components/GuidedTravel";
@@ -17,7 +18,8 @@ export default function Home() {
       <FeatureSection />
       <InternationalTrips />
       <ExploreIndia />
-      <UpcomingTrips />
+      {/* <UpcomingTrips /> */}
+      <FeaturedTours />
       <GuidedTravel />
       <BestMoments />
       <Testimonials />
