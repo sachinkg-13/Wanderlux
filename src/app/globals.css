@@ -182,4 +182,64 @@
   .testimonial-card {
     @apply bg-white p-6 rounded-lg shadow-md border border-gray-100;
   }
+  /* Enhanced Animation Classes */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-travel-teal/20;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .animate-stagger-1 {
+    animation-delay: 100ms;
+  }
+
+  .animate-stagger-2 {
+    animation-delay: 200ms;
+  }
+
+  .animate-stagger-3 {
+    animation-delay: 300ms;
+  }
+
+  .animate-stagger-4 {
+    animation-delay: 400ms;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .cta-gradient {
+    background: linear-gradient(135deg, #2a9d8f 0%, #09493c 100%);
+  }
+
+  .sidebar-link {
+    @apply relative overflow-hidden;
+  }
+
+  .sidebar-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-travel-teal transition-all duration-300;
+  }
+
+  .sidebar-link:hover::after {
+    @apply w-full;
+  }
 }
