@@ -9,12 +9,14 @@ import InternationalTrips from "@/components/InternationalTrips";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
 import UpcomingTrips from "@/components/UpcomingTrips";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
     <div className="min-h-screen " >
       <Navbar />
       <Hero />
+      <WhyChooseUs />
       <FeatureSection />
       <InternationalTrips />
       <ExploreIndia />
